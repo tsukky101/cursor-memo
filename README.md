@@ -37,7 +37,13 @@ npm run dev
 
 `main` へ push すると [GitHub Actions](https://github.com/tsukky101/cursor-memo/actions) がビルドしてデプロイします。
 
-初回だけリポジトリの **Settings → Pages → Build and deployment** で **Source** を **GitHub Actions** にしてください（「Deploy from a branch」ではなく Actions 用の設定です）。
+### 必須: Pages を有効にする
+
+デプロイが **`Failed to create deployment (status: 404)`** や **Ensure GitHub Pages has been enabled** で失敗する場合、次が未設定なことがほとんどです。
+
+1. リポジトリの **[Settings → Pages](https://github.com/tsukky101/cursor-memo/settings/pages)** を開く  
+2. **Build and deployment** の **Source** で **GitHub Actions** を選ぶ（「Deploy from a branch」にしない）  
+3. [Actions](https://github.com/tsukky101/cursor-memo/actions) で失敗したワークフローを **Re-run all jobs** する（または空コミットで再度 push）
 
 反映まで 1〜2 分かることがあります。URL は上記の `/cursor-memo/` です（リポジトリ名と一致）。
 
