@@ -2,6 +2,8 @@
 
 ブラウザだけで動くシンプルなメモアプリです。メモは **localStorage** に保存され、サーバーは不要です。
 
+**公開サイト（GitHub Pages）:** [https://tsukky101.github.io/cursor-memo/](https://tsukky101.github.io/cursor-memo/)
+
 ## 使い方
 
 - **新しいメモ**でメモを追加
@@ -16,7 +18,7 @@
 ## セットアップと起動
 
 ```powershell
-cd memo-app
+cd cursor-memo
 npm install
 npm run dev
 ```
@@ -30,6 +32,14 @@ npm run dev
 | `npm run dev` | 開発サーバー起動 |
 | `npm run build` | 本番用ビルド（`dist/` に出力） |
 | `npm run preview` | ビルド結果のプレビュー |
+
+## GitHub Pages での公開
+
+`main` へ push すると [GitHub Actions](https://github.com/tsukky101/cursor-memo/actions) がビルドしてデプロイします。
+
+初回だけリポジトリの **Settings → Pages → Build and deployment** で **Source** を **GitHub Actions** にしてください（「Deploy from a branch」ではなく Actions 用の設定です）。
+
+反映まで 1〜2 分かることがあります。URL は上記の `/cursor-memo/` です（リポジトリ名と一致）。
 
 ## 技術スタック
 
